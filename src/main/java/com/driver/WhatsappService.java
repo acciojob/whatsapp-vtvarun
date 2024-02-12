@@ -91,8 +91,8 @@ public class WhatsappService {
         boolean groupExists = whatsappRepository.groupExists(group);
         if(!groupExists) throw new Exception("Group does not exist");
 
-        boolean userExists = whatsappRepository.userExists(sender.getMobile());
-        if(!userExists) throw new Exception("Sender does not exist");
+//        boolean userExists = whatsappRepository.userExists(sender.getMobile());
+//        if(!userExists) throw new Exception("Sender does not exist");
 
         boolean isSenderGroupMember = whatsappRepository.isSenderGroupMember(sender,group);
         if(!isSenderGroupMember) throw new Exception("You are not allowed to send message");
